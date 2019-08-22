@@ -22,19 +22,25 @@ Installation:
 
 Endpoints
 ---------
-A succinct list with all endpoints
-    * Base
-        * ``.../`` - GET - overview :notebook:
-    * Auth
-        * ``.../login/`` - POST - Create token :heavy_plus_sign:
-        * ``.../logout/`` - POST - Delete token :heavy_minus_sign:
-    * Cat endpoints
-        * ``.../cats/`` - GET - Get all cats :smile_cat:
-        * ``.../cats/`` - POST - Create new cat :heart_eyes_cat:
-        * ``.../cat/{cat_id}/`` - GET - Get info for a specific cat :cat:
-        * ``.../cat/{cat_id}/`` - PUT - Update information about a cat :smirk_cat:
-        * ``.../cat/{cat_id}/`` - DELETE - Delete cat :crying_cat_face:
-        * ``.../cat/{cat_id}/add_vaccine`` - POST - Add a vaccine to a cat :scream_cat:
+=====================================  ========  ============================================
+  ENDPOINT                              METHOD               DESCRIPTION
+=====================================  ========  ============================================
+  Base
+---------------------------------------------------------------------------------------------
+  ``.../``                               GET             overview :notebook:
+  Auth
+---------------------------------------------------------------------------------------------
+  ``.../login/``                         POST          Create token :heavy_plus_sign:
+  ``.../logout/``                        POST         Delete token :heavy_minus_sign:
+  Cats
+---------------------------------------------------------------------------------------------
+  ``.../cats/``                          GET            Get all cats :smile_cat:
+  ``.../cats/``                          POST        Create new cat :heart_eyes_cat:
+  ``.../cat/{cat_id}/``                  GET        Get info for a specific cat :cat:
+  ``.../cat/{cat_id}/``                  PUT      Update information about a cat :smirk_cat:
+  ``.../cat/{cat_id}/``                 DELETE      Delete cat :crying_cat_face:
+  ``.../cat/{cat_id}/add_vaccine``       POST       Add a vaccine to a cat :scream_cat:
+=====================================  ========  ============================================
 
 .. _Sesotho: https://en.wikipedia.org/wiki/Sotho_language
 .. _Poetry: https://github.com/sdispater/poetry
