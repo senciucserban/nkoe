@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "nkoe"
+version = "0.1.0"
+description = ""
+authors = ["Serban Senciuc <serban.senciuc@gmail.com>"]
+repository = "https://github.com/senciucserban/nkoe"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+aiohttp = "^3.5"
+python-dotenv = "^0.10.3"
+coloredlogs = "^10.0"
+pytz = "^2019.2"
+toml = "^0.10.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
