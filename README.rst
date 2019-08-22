@@ -4,13 +4,7 @@ Jara core package
 
     Nkoe means tiger in `Sesotho`_ :tiger:
 
-
-.. image:: https://img.shields.io/badge/python-3.7.x-blue.svg
-    :alt: Python 3.7.x
-.. image:: https://img.shields.io/badge/code_style-flake8-brightgreen.svg
-    :alt: Flake8
-.. image:: https://img.shields.io/badge/dependency_manager-poetry-blueviolet.svg
-    :alt: Poetry
+|python| |flake8| |poetry|
 
 Installation
 ------------
@@ -27,3 +21,10 @@ Installation:
 .. _Sesotho: https://en.wikipedia.org/wiki/Sotho_language
 .. _Poetry: https://github.com/sdispater/poetry
 .. _Postman: https://www.getpostman.com
+
+.. |python| image:: https://img.shields.io/badge/python-3.7.x-blue.svg
+    :alt: Python 3.7.x
+.. |flake8| image:: https://img.shields.io/badge/code_style-flake8-brightgreen.svg
+    :alt: Flake8
+.. |poetry| image:: https://img.shields.io/badge/dependency_manager-poetry-blueviolet.svg
+    :alt: Poetry
