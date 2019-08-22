@@ -1,5 +1,5 @@
 =================
-Jara core package
+Nkoe core package
 =================
 
     Nkoe means tiger in `Sesotho`_ :tiger:
