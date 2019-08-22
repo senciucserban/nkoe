@@ -6,6 +6,8 @@ Nkoe core package
 
 |python| |flake8| |poetry|
 
+A basic `aiohttp` server which implement few endpoints. This project was made with educational purpose so those are some basic things.
+
 Installation
 ------------
 First you need some tools:
