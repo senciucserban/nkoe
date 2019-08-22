@@ -1,6 +1,6 @@
-=========================
-Nkoe core package :tiger:
-=========================
+====
+Nkoe
+====
 
     Nkoe means tiger in `Sesotho`_ :tiger:
 

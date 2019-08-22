@@ -20,6 +20,7 @@ class Settings:
 
     DEBUG = str2bool(os.environ.get('NKOE_DEBUG', 'true'))
     ENVIRONMENT = NkoeEnvironment(os.environ.get('NKOE_ENVIRONMENT', 'local').lower())
+    AIOHTTP_LOGS = str2bool(os.environ.get('NKOE_AIOHTTP_LOGS', 'true'))
 
 
 settings = Settings()

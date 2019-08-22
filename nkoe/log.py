@@ -59,6 +59,9 @@ def setup_logging():
     logging.config.dictConfig(CONFIG)
     logging.getLogger('asyncio').setLevel('INFO')
 
+    if not settings.AIOHTTP_LOGS:
+        logging.getLogger('aiohttp').setLevel('WARNING')
+
 
 class JSONHandler(logging.StreamHandler):
     def __init__(self, stream=None):
