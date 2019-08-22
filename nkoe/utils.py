@@ -1,6 +1,6 @@
 import logging
 from hashlib import md5
-from typing import Dict
+from typing import Dict, List
 
 from nkoe.enums import Colors
 
@@ -15,14 +15,10 @@ def str2bool(val: str) -> bool:
     return False
 
 
-def format_blue_bold(value: str) -> str:
-    return f'{Colors.OKBLUE.value}{Colors.BOLD.value}{value}{Colors.ENDC.value}'
-
-
-def format_green_bold(value: str) -> str:
-    return f'{Colors.OKGREEN.value}{Colors.BOLD.value}{value}{Colors.ENDC.value}'
+def highlight(specs: List[Colors], value: str):
+    return f'{"".join([c.value for c in specs])}{value}{Colors.ENDC.value}'
 
 
 def make_token(user: Dict[str, str]) -> str:
-    log.info(f'User {format_green_bold(user["username"])} wants to authenticate!')
+    log.info(f'User {highlight([Colors.OKGREEN, Colors.BOLD], user["username"])} wants to authenticate!')
     return md5(f'{user["username"]} - {user["password"]}'.encode('utf-8')).hexdigest()
