@@ -13,12 +13,13 @@ python-dotenv = "^0.10.3"
 coloredlogs = "^10.0"
 pytz = "^2019.2"
 toml = "^0.10.0"
+jara = "^1.0"
 
 [tool.poetry.dev-dependencies]
 
 [tool.poetry.scripts]
 server = 'manager:main'
+
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
-

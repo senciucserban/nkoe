@@ -17,3 +17,14 @@ class Colors(enum.Enum):
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
+
+
+class Emoji(enum.Enum):
+    SMILING_CAT = '\N{grinning cat face with smiling eyes}'
+    SCARED_CAT = '\N{weary cat face}'
+    KISSING_CAT = '\N{kissing cat face with closed eyes}'
+    CRYING_CAT = '\N{crying cat face}'
+    LOVE_CAT = '\N{smiling cat face with heart-shaped eyes}'
+    ROCKET = '\N{rocket}'
+    PERSON = '\N{adult}'
+    NOTEBOOK = '\N{notebook}'
