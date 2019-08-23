@@ -24,6 +24,7 @@ class Emoji(enum.Enum):
     SCARED_CAT = '\N{weary cat face}'
     KISSING_CAT = '\N{kissing cat face with closed eyes}'
     CRYING_CAT = '\N{crying cat face}'
+    ANGRY_CAT = '\N{pouting cat face}'
     LOVE_CAT = '\N{smiling cat face with heart-shaped eyes}'
     ROCKET = '\N{rocket}'
     PERSON = '\N{adult}'

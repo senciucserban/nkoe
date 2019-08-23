@@ -112,19 +112,20 @@ async def add_vaccine(request: Request):
     if errors:
         return web.json_response(errors, status=404)
 
+    body = await request.json()
     try:
-        assert 'vaccine' in request.query
+        assert 'vaccine' in body
     except AssertionError:
         return web.json_response({'vaccine': 'missing'}, status=400)
 
     cat = get_cat_from_list(pk)
-    vaccine = str(request.query['vaccine']).upper()
+    vaccine = str(body['vaccine']).upper()
 
     if vaccine in cat.vaccines:
         emoji_prefix = Emoji.SCARED_CAT.value
         log.error(f'{emoji_prefix} OMG this hooman tries to vaccinate me with a {vaccine} which I already did!')
         return web.json_response({'vaccine': 'you already did this vaccine'}, status=400)
 
-    log.info(f'{Emoji.CRYING_CAT.value} Stupid hooman: "We will go to buy some food", he goes with me at VET.'
+    log.info(f'{Emoji.ANGRY_CAT.value} Stupid hooman: "We will go to buy some food", he goes with me at VET. '
              f'It hurts as hell this vaccine for {vaccine}')
     return web.json_response({'status': f'Cat with id {pk} was vaccinated'}, status=200)
