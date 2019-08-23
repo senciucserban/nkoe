@@ -38,7 +38,7 @@ Endpoints
   ``.../cats/``                         POST         Create new cat :heart_eyes_cat:
   ``.../cats/{cat_pk}/``                GET          Get info for a specific cat :cat:
   ``.../cats/{cat_pk}/``                PUT        Update information about a cat :smirk_cat:
-  ``.../cats/{cat_pk}/``                DELETE       Delete cat :crying_cat_face:
+  ``.../cats/{cat_pk}/``                DELETE       Delete a cat :crying_cat_face:
   ``.../cats/{cat_pk}/vaccine``         POST        Add a vaccine to a cat :scream_cat:
 =====================================  ========  ============================================
 

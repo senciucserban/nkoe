@@ -17,7 +17,7 @@ async def login(request: Request):
     if 'username' not in body:
         errors['username'] = 'missing'
     if 'password' not in body:
-        errors['password'] = 'password'
+        errors['password'] = 'missing'
     if errors:
         log.error(f'{Emoji.SCARED_CAT.value} A hooman tried to login with wong body structure -> {body}')
         return web.json_response(errors, status=401)

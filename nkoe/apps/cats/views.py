@@ -96,7 +96,7 @@ async def update_cat(request: Request):
 
 @routes.delete('/{cat_pk}/')
 async def delete_cat(request: Request):
-    """Delete cat :crying_cat_face:"""
+    """Delete a cat :crying_cat_face:"""
     errors, pk = check_pk(request.match_info['cat_pk'], cats)
     if errors:
         return web.json_response(errors, status=404)
