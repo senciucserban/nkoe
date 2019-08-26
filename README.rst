@@ -12,6 +12,8 @@ About
 -----
 Here it's a `presentation`_ about what about what you can find in this repository.
 
+Here it's a `documentation`_ made in postman.
+
 Installation
 ------------
 First you need some tools:
@@ -63,6 +65,7 @@ Endpoints
 .. _Postman: https://www.getpostman.com
 .. _presentation: https://docs.google.com/presentation/d/1RbkpSnGvNpZUGb_rxZrdXsWu4NoraZtWeLaq7KSQMlg/edit
 .. _aiohttp: https://aiohttp.readthedocs.io/en/stable/
+.. _documentation: https://documenter.getpostman.com/view/2282350/SVfKyB44?version=latest
 
 .. |python| image:: https://img.shields.io/badge/python-3.7.x-blue.svg
     :alt: Python 3.7.x
