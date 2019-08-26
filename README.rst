@@ -6,7 +6,11 @@ Nkoe
 
 |python| |flake8| |poetry|
 
-A basic `aiohttp` server which implement few endpoints. This project was made with educational purpose so those are some basic things.
+A basic `aiohttp`_ server which implement few endpoints. This project was made with educational purpose so those are some basic things.
+
+About
+-----
+Here it's a `presentation`_ about what about what you can find in this repository.
 
 Installation
 ------------
@@ -19,6 +23,18 @@ Installation:
     2. Install dependencies with ``poetry install``;
     3. Take a look at ``.example.env`` to see if you must configure something;
     4. Now run server with the following command: ``poetry run server``;
+
+Postman Setup
+-------------
+    I assume you already have installed and setup postman locally; **Note** I recommend to create a new workspace to avoid overwriting existing things!
+
+For **collection**: Open postman and from left upper corner select ``import`` and then ``Import from link`` and put this link: https://www.getpostman.com/collections/33c1efb9969544146bf9.
+
+For **environment**: In this repository you will find a folder named ``docs``. Open postman select from left upper corner ``import`` and then ``Import folder`` and just drag and drop that folder.
+
+For **globals**: From right upper corner click on that ``eye``, go with mouse on globals row and press edit, in that table add a new row with: Variable = username, Initial value = [your name], Current Value = [leave it blank], and press **save**.
+
+    For ``local`` environment I suppose you will run your server on port ``8080`` and for ``qa`` on port ``8081``.
 
 Endpoints
 ---------
@@ -45,6 +61,8 @@ Endpoints
 .. _Sesotho: https://en.wikipedia.org/wiki/Sotho_language
 .. _Poetry: https://github.com/sdispater/poetry
 .. _Postman: https://www.getpostman.com
+.. _presentation: https://docs.google.com/presentation/d/1RbkpSnGvNpZUGb_rxZrdXsWu4NoraZtWeLaq7KSQMlg/edit
+.. _aiohttp: https://aiohttp.readthedocs.io/en/stable/
 
 .. |python| image:: https://img.shields.io/badge/python-3.7.x-blue.svg
     :alt: Python 3.7.x

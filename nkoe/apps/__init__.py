@@ -12,11 +12,13 @@ async def error_middleware(request, handler):
         if response.status != 404:
             return response
         message = response.message
+        status = response.status
     except web.HTTPException as ex:
         if ex.status != 404:
             raise
         message = ex.reason
-    return web.json_response({'error': message})
+        status = ex.status
+    return web.json_response({'error': message}, status=status)
 
 
 app = web.Application(middlewares=[error_middleware])

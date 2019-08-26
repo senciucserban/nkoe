@@ -32,7 +32,7 @@ async def add_cat(request: Request):
     body = await request.json()
     if 'pk' in body:
         log.error(f"{Emoji.SCARED_CAT.value} Hooman provided a pk to create a cat. Might he didn't know the rules.")
-        return web.json_response({'pk': 'will be auto generated'})
+        return web.json_response({'pk_error': 'will be auto generated'}, status=400)
     body = {**body, 'pk': cats[-1].pk + 1}
 
     try:
@@ -65,7 +65,7 @@ async def get_cat(request: Request):
     """Get info for a specific cat :cat:"""
     errors, pk = check_pk(request.match_info['cat_pk'], cats)
     if errors:
-        return web.json_response(errors, status=404)
+        raise web.HTTPNotFound(reason=errors)
     cat = get_cat_from_list(pk).as_dict
     log.info(f'{Emoji.KISSING_CAT.value} Hooman this is your brave cat with code {pk}! Take care of him!')
     return web.json_response({'result': cat})
@@ -76,7 +76,7 @@ async def update_cat(request: Request):
     """Update information about a cat :pencil2:"""
     errors, pk = check_pk(request.match_info['cat_pk'], cats)
     if errors:
-        return web.json_response(errors, status=404)
+        raise web.HTTPNotFound(reason=errors)
 
     body = await request.json()
     if 'pk' in body:
@@ -99,7 +99,7 @@ async def delete_cat(request: Request):
     """Delete a cat :crying_cat_face:"""
     errors, pk = check_pk(request.match_info['cat_pk'], cats)
     if errors:
-        return web.json_response(errors, status=404)
+        raise web.HTTPNotFound(reason=errors)
     cats.remove(get_cat_from_list(pk))
     log.info(f'{Emoji.CRYING_CAT.value} Cat with the code {pk} left the gang. Bring the torches and forks boys.')
     return web.json_response({'status': f'Cat with id {pk} has been deleted'})
@@ -110,7 +110,7 @@ async def add_vaccine(request: Request):
     """Add a vaccine to a cat :syringe:"""
     errors, pk = check_pk(request.match_info['cat_pk'], cats)
     if errors:
-        return web.json_response(errors, status=404)
+        raise web.HTTPNotFound(reason=errors)
 
     body = await request.json()
     try:
