@@ -1,7 +1,7 @@
 import dataclasses
 from typing import List
 
-from jara.types import enforce_types
+from nkoe.helpers import enforce_types
 
 
 @enforce_types

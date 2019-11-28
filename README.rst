@@ -10,15 +10,15 @@ A basic `aiohttp`_ server which implement few endpoints. This project was made w
 
 About
 -----
-Here it's a `presentation`_ about what about what you can find in this repository.
-
 Here it's a `documentation`_ made in postman.
+
+As exercise you must add request with documentation for endpoint ``Add vaccine to a cat``. You can choose any cat you want.
 
 Installation
 ------------
 First you need some tools:
     1. A dependency manager: `Poetry`_.
-    2. For presentation you will need `Postman`_ to perform requests.
+    2. For tests you will need `Postman`_ to perform requests.
 
 Installation:
     1. Clone project locally;
