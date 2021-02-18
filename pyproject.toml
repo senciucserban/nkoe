@@ -13,8 +13,13 @@ python-dotenv = "^0.10.3"
 coloredlogs = "^10.0"
 pytz = "^2019.2"
 toml = "^0.10.0"
+test1 = { path = "../test1/" }
 
 [tool.poetry.dev-dependencies]
+pytest = "^5.4.2"
+
+[tool.poetry.extras]
+test = ["pytest"]
 
 [tool.poetry.scripts]
 server = 'manager:main'
